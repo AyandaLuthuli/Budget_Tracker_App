@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Budget Tracker</h1>
+      </header>
+
+      <div class="balance-container">
+        <h3>Your Balance</h3>
+        <h2 id="balance">R0.00</h2>
+
+        <div class="summary">
+          <div class="income">
+            <h4>Income</h4>
+            <p id="income-total">R0.00</p>
+          </div>
+          <div class="expense">
+            <h4>Expense</h4>
+            <p id="expense-total">R0.00</p>
+          </div>
+        </div>
+      </div>
+
+      <form id="transaction-form">
+        <h3>Add New Transaction</h3>
+        <div class="form-control">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            id="description"
+            placeholder="Enter description..."
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            id="amount"
+            placeholder="Enter amount..."
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="type">Type</label>
+          <select id="type" required>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Add Transaction</button>
+      </form>
+
+      <div class="transactions">
+        <h3>Transaction History</h3>
+        <ul id="transaction-list"></ul>
+      </div>
+
+      <div class="chart-container">
+        <h3>Spending Breakdown</h3>
+        <canvas id="chart" width="300" height="300"></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
