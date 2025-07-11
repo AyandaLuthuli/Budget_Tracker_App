@@ -11,12 +11,12 @@
     <div class="container">
       <header>
         <h1>Budget Tracker</h1>
+        <button id="theme-toggler">🌙</button>
       </header>
 
       <div class="balance-container">
         <h3>Your Balance</h3>
         <h2 id="balance">R0.00</h2>
-
         <div class="summary">
           <div class="income">
             <h4>Income</h4>
@@ -41,13 +41,25 @@
           />
         </div>
         <div class="form-control">
-          <label for="amount">Amount</label>
+          <label for="amount">Amount (R)</label>
           <input
             type="number"
             id="amount"
             placeholder="Enter amount..."
             required
           />
+        </div>
+        <div class="form-control">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="food">🍔 Food</option>
+            <option value="transport">🚗 Transport</option>
+            <option value="housing">🏠 Housing</option>
+            <option value="shopping">🛍️ Shopping</option>
+            <option value="entertainment">🎬 Entertainment</option>
+            <option value="salary">💰 Salary</option>
+            <option value="other">❓ Other</option>
+          </select>
         </div>
         <div class="form-control">
           <label for="type">Type</label>
@@ -58,6 +70,18 @@
         </div>
         <button type="submit" class="btn">Add Transaction</button>
       </form>
+
+      <div class="controls">
+        <div class="search-filter">
+          <input type="text" id="search" placeholder="Search transactions..." />
+          <select id="filter">
+            <option value="all">All</option>
+            <option value="income">Income</option>
+            <option value="expense">Expenses</option>
+          </select>
+        </div>
+        <button id="clear-btn" class="btn">Clear All</button>
+      </div>
 
       <div class="transactions">
         <h3>Transaction History</h3>
