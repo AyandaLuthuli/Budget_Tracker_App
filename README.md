@@ -1,6 +1,7 @@
 # Budget_Tracker_App
 A simple and responsive app to track your income and expenses
 
+Live Demo:https://ayandaluthuli.github.io/Budget_Tracker_App/
 A fully functional and responsive budget tracking app built from scratch with HTML, CSS, and JavaScript. Includes transaction categories, theming, filtering, and data persistence with localStorage.
 
 # 📦 Technologies
